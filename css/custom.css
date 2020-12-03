@@ -1,0 +1,33 @@
+.dot {
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+/*.food {
+    border-style: solid;
+    border-color: yellow;
+    border-width: 10px;
+}*/
+/* 
+#containerFruits {
+    display: none;
+}
+
+#containerVegetables {
+    display: none;
+} */
+
+.email-warning{
+    border-color: red;
+}
+
+.email-valid{
+    border-color: green;
+}

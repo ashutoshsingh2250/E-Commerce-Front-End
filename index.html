@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cool Veggies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  </script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+    .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"> <strong> Best Veggies </strong> </a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Stores</a></li>
+          <li><a href="#">Contact</a></li>
+          <li></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <div class="">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" id="inputSearch" class="form-control" placeholder="Search" >
+                <!-- onkeypress="onEnter()" -->
+
+                <select class="form-control" id="selectHistory">
+                  <option value="">Stored History</option>
+                </select>
+
+                <select class="form-control" id="selectProdType">
+                  <option value="selAll">Select All</option>
+                  <option value="selVegetables">Vegetables</option>
+                  <option value="selFruits">Fruits</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </ul>
+
+        <!-- <ul class="nav navbar-nav">
+          <div class="form-group search-bar">
+            <select class="form-control" id="selectProdType">
+              <option value="selCategory">Select Category</option>
+              <option value="selVegetables">Vegetables</option>
+              <option value="selFruits">Fruits</option>
+            </select>
+          </div>
+        </ul> -->
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- onmouseover="incrementCounter(this)" onmouseout="displayNresetCounter(this)" -->
+
+  <div class="container" id="containerVegetables">
+    <div class="row">
+      <div id="tomatoDiv" class="col-sm-4 vegetable food" >
+        <div class="panel panel-primary">
+          <div class="panel-heading">Tomato</div>
+          <div class="panel-body"><img src="cart Images/tomato.jpg" class="img-responsive"
+              style="width:100%; height: 250px;" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="tomatoButton" type="button" class="btn btn-primary item-btn">Buy
+              Tomatoes</button>
+            <span id="v1" class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="cucumberDiv" class="col-sm-4 vegetable food">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Cucumber</div>
+          <div class="panel-body"><img src="cart Images/cucumber.jpg" class="img-responsive"
+              style="width:100%;  height: 250px;" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="cucumberButton" type="button" class="btn btn-primary item-btn">Buy
+              Cucumbers</button>
+            <span id="v2" class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="chillyDiv" class="col-sm-4 vegetable food">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Chilly</div>
+          <div class="panel-body"><img src="cart Images/chilli.jpg" class="img-responsive"
+              style="width:100%; height: 250px" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="chillyButton" type="button" class="btn btn-primary item-btn">Buy
+              Chillies</button>
+            <span id="v3" class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container" id="containerFruits">
+    <div class="row">
+      <div id="strawberryDiv" class="col-sm-4 fruit food">
+        <div class="panel panel-primary ">
+          <div class="panel-heading">Strawberry</div>
+          <div class="panel-body"><img id="strawberyImg" src="cart Images/strawbery.jpg" class="img-responsive"
+              style="width:100%; height: 250px;" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="strawberryButton" type="button" class="btn  btn-primary item-btn">Buy Strawberries</button>
+            <span id="f1" class="dot"></span>
+          </div>
+        </div>
+      </div>
+      <div id="mangoDiv" class="col-sm-4 fruit food">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Mango</div>
+          <div class="panel-body"><img src="cart Images/mango.jpg" class="img-responsive"
+              style="width:100%;  height: 250px;" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="mangoButton" type="button" class="btn btn-primary item-btn">Buy
+              Mangoes</button>
+            <span id="f2" class="dot">0</span>
+          </div>
+        </div>
+      </div>
+      <div id="pineappleDiv" class="col-sm-4 fruit food">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Pineapple</div>
+          <div class="panel-body"><img src="cart Images/pineapple.jpg" class="img-responsive"
+              style="width:100%; height: 250px" alt="Image"></div>
+          <div class="panel-footer">
+            <button id="pineappleButton" type="button" class="btn btn-primary item-btn">Buy
+              Pineapples</button>
+            <span id="f3" class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+
+  <footer class="container-fluid text-center">
+    <p>Online Store Copyright</p>
+    <form class="form-inline">Get deals:
+      <input id="inputEmailValue" type="email" class="form-control" size="50" placeholder="Email Address">
+      <button id="validateBtn" type="button" class="btn btn-danger">Sign Up</button>
+    </form>
+  </footer>
+
+</body>
+
+</html>
